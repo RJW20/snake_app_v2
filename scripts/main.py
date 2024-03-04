@@ -38,13 +38,13 @@ def main():
                     key_pressed = True
 
                     if event.key == pygame.K_UP:
-                        move = Direction.N
+                        move = 'up'
                     elif event.key == pygame.K_RIGHT:
-                        move = Direction.E
+                        move = 'right'
                     elif event.key == pygame.K_DOWN:
-                        move = Direction.S
+                        move = 'down'
                     elif event.key == pygame.K_LEFT:
-                        move = Direction.W
+                        move = 'left'
 
         #move in the chosen direction
         snake.move(move)
