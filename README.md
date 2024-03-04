@@ -23,4 +23,4 @@ A python implementation of the the game Snake using [pygame](https://www.pygame.
 3. Use the arrow keys to change the snake's direction as appropriate.
 
 ## Note
-This was made with the intention of creating an AI for the game using the genetic algorithm as seen [here](https://github.com/RJW20/snake_ai_genetic_algorithm_v2). Version 2 was created over my [original](https://github.com/RJW20/snake_app) because although the orignal allows for faster learning by always having the snake be travelling forward from it's perspective, this then also means the resulting AI will behave the same in every direction which is not what the perfect 'solution' to the game is.
+This was made with the intention of creating an AI for the game using the genetic algorithm as seen [here](https://github.com/RJW20/snake_ai_genetic_algorithm_v2). Version 2 was created over my [original](https://github.com/RJW20/snake_app) because although the original allows for faster learning by always having the snake be travelling forward from it's perspective, this then also means the resulting AI will behave the same in every direction which is not what the perfect 'solution' to the game is.
