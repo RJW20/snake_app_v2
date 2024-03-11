@@ -1,6 +1,7 @@
 import random
 from collections import deque
 from typing import Literal
+from functools import cached_property
 
 from snake_app.cartesian import Point, Direction
 from snake_app.food import Food
@@ -16,6 +17,10 @@ class Snake:
         self.body: deque[Point]
         self.target: Food = Food(self.grid_size)
         self.score: int
+
+    @cached_property
+    def max_score(self) -> int:
+        return (self.grid_size[0] * self.grid_size[1]) - self.start_length
 
     def start_position(self) -> Point:
         """Return a random start position on the grid.
@@ -93,8 +98,9 @@ class Snake:
 
         #if we're on top of the food then we're eating it
         if self.target.position == new_head_position:
-            self.target.new_position(self.body)
             self.score += 1
+            if self.score < self.max_score:
+                self.target.new_position(self.body)
         #if we didn't just eat food, remove the end position
         else:
             self.body.pop()
